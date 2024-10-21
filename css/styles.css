@@ -1,0 +1,251 @@
+* {
+    margin: 1; 
+    padding: 1; 
+    box-sizing: border-box; 
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    width: 100%; 
+}
+
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 100%; 
+    margin: 0;
+    padding: 10px;
+}
+
+
+.header {
+    background-color: #1b2631;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+
+.navbar {
+    background-color: #007acc;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+}
+
+
+.contenido {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid #007acc;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #007acc;
+}
+
+.justificar {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+.contenedor-campeones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .contenedor-campeones {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-campeones {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.campeon {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border: 2px solid #007acc;
+    border-radius: 8px;
+    transition: transform 0.3s ease; 
+}
+
+.campeon:hover {
+    transform: scale(1.05);
+}
+
+.campeon-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; 
+}
+
+.campeon:hover .campeon-imagen {
+    transform: scale(1.1); 
+}
+
+.nombre-campeon {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #0014ff;
+    color: white;
+    text-align: center;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-style: italic;
+    box-sizing: border-box;
+}
+
+.campeon a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    z-index: 10;
+}
+
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #3e3e3e;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.tabla-imagenes {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.imagen-tabla {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 3px solid #007acc;
+    border-radius: 8px;
+}
+
+td {
+    padding: 0;
+    text-align: center;
+    vertical-align: top;
+}
+
+@media (max-width: 768px) {
+    .tabla-imagenes {
+        max-width: 100%;
+    }
+
+    .imagen-tabla {
+        height: 200px;
+    }
+}
+
+
+.imagen-skarner {
+    width: 450px;
+    height: auto;
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 10px; 
+    border: 3px solid #007acc;
+    border-radius: 8px; 
+}
+
+.imagen-Mundial {
+    width: 100%;
+    height: 30%; 
+    border: 3px solid #007acc; 
+    border-radius: 8px; 
+}
+
+.centrar {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.centrar img {
+    max-width: 95%;
+    height: auto;
+    border: 3px solid #007acc;
+}
+.resaltar-riot {
+    color: red;
+    font-weight: bold;
+}
